@@ -1,7 +1,84 @@
-/**************************** 공통사항 ***************************/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Open+Sans:wght@300;400;600&display=swap');
 
+
+/* 
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Open Sans', sans-serif; 
+*/
+
+/**************************** 공통사항 ***************************/
+html, body {height: 5000px; font-family: 'Cormorant Garamond', serif;}
+.wrapper {max-width: 1800px; padding: 0 25px; margin: auto;}
+.wrapper-sm {max-width: 1300px; margin: 100px auto;}
+.font-os {font-family: 'Open Sans', sans-serif; letter-spacing: 0.25em; font-size: 0.75rem;}
+.title-sub {font-size: 0.75rem; margin-bottom: -0.75rem;}
+.card {border: none; border-radius: unset;}
+.card-img, .card-img-top {border-top-left-radius: 0; border-top-right-radius: 0;}
+.card-body {padding: 1.5rem 0;}
 
 /**************************** header ***************************/
+.header {color: #222;}
+.header .navi {font-size: 1.25rem; font-weight: 600;}
+.header .navi::after {content: ""; display: block; opacity: 0; border-bottom: 1px solid #222; transition: all 0.3s;}
+.header .navi:hover::after {opacity: 1;}
+.header .navi:active::after {opacity: 1;}
+.header .sns-wrap {font-size: 1rem;}
+.header .mo-wrap {display: flex; flex-direction: column; align-items: flex-start;}
+
+/**************************** main-wrapper ***************************/
+.main-wrapper > div {background-repeat: no-repeat; background-position: center; background-size: cover;}
+.main-wrapper .slogan-wrap {flex: 35% 0 0; padding: 10% 5%; background-image: url(../img/background-1.jpg);}
+.main-wrapper .banner {flex: 65% 0 0; background-image: url(../img/background-2.jpg);}
+.main-wrapper .title {font-size: 4.5rem;}
+.main-wrapper .cont {font-size: 1.25rem; color: #888;}
+
+/**************************** link-wrapper ***************************/
+.link-wrapper .link {flex: 31% 0 0; padding: 5rem rem;}
+.link-wrapper .link .title {font-size: 2.5rem;}
+.link-wrapper .link .cont {color: #888; font-size: 1.25rem;}
+.link-wrapper .link:nth-child(1) {background-color: #f7f7f4;}
+.link-wrapper .link:nth-child(2) {background-color: #f2f2f6;}
+.link-wrapper .link:nth-child(3) {background-color: #faf2ef;}
+.link-wrapper .banner {font-size: 5rem; background: url(../img/background-3.jpg) no-repeat center; background-size: cover;}
+
+/**************************** post-wrapper ***************************/
+.post-wrapper > .title {font-size: 4rem;}
+
+
+/**************************** blog-wrapper ***************************/
+.blog-wrapper .title-wrap {padding: 5%; background: url(../img/background-4.jpg) no-repeat center; background-size: cover;}
+.blog-wrapper .tites {flex: 40% 0 0; color: #fff;}
+.blog-wrapper .tites .title {font-size: 6rem; line-height: 7rem;}
+.blog-wrapper .signature {flex: 40% 0 0;}
+
+/**************************** blog-wrapper ***************************/
+.news-wrapper {padding: 5%; background: url(../img/background-5.jpg) no-repeat center; background-size: cover;}
+.news-wrapper .title {flex: 45% 0 0; font-size: 3.5rem;}
+.news-wrapper .form-subscribe {flex: 55% 0 0;}
+.news-wrapper .subscribe {width: 60%; padding: 0.5rem; border: none; background-color: transparent; border-bottom: 1px solid white; outline: none; color: #fff;}
+.news-wrapper .subscribe::placeholder {color: #fff;}
 
 
 /**************************** footer ***************************/
+
+
+
+/**************************** 반응형 ***************************/
+@media screen and (max-width: 991px) {
+  .logo {left: 50%; transform: translateX(-50%);}
+  .main-wrapper .slogan-wrap {padding: 10% 15%;}
+  .main-wrapper .banner {height: 500px;}
+  .news-wrapper {padding: 10%;}
+}
+
+@media screen and (max-width: 767px) {
+  .link-wrapper .banner {font-size: 2.5rem;}
+  .news-wrapper {padding: 15
+    
+    % 10%;}
+}
+
+@media screen and (max-width: 575px) {
+  .link-wrapper .banner {font-size: 1.75rem;}
+  .news-wrapper {padding: 20% 10%;}
+}
